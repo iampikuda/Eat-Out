@@ -12,6 +12,7 @@ import UIKit
 final class AppCoordinator {
 
     let window: UIWindow
+    let cacheService: CacheService
 
 //    var user: User?
 //
@@ -20,8 +21,12 @@ final class AppCoordinator {
 //        return try! Realm()
 //    }
 
-    init(window: UIWindow) {
+    init(window: UIWindow, cacheService: CacheService) {
         self.window = window
+        self.cacheService = cacheService
+
+        self.cacheService.delegate = self
+        self.cacheService.getRestuarants()
     }
 
     final func setUserIfPossible() {
@@ -42,6 +47,13 @@ final class AppCoordinator {
 
     final func startApp() {
 //        self.setUserIfPossible()
-        window.rootViewController = ViewController()
+        let vc = HomeViewController(viewModel: HomeViewModel(), sortViewModel: SortViewModel())
+        window.rootViewController = UINavigationController(rootViewController: vc)
+    }
+}
+
+extension AppCoordinator: CacheDelegate {
+    func gotError(_ error: Error) {
+        assertionFailure(error.localizedDescription)
     }
 }

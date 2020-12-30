@@ -8,7 +8,13 @@
 import UIKit
 import SnapKit
 
+protocol SortDelegate: class {
+    func sortBy(_ sorter: Sorter)
+}
+
 final class SortView: UIView {
+    weak var delegate: SortDelegate?
+
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -23,7 +29,6 @@ final class SortView: UIView {
 
     private var currentIndexPath = IndexPath(row: 0, section: 0)
 
-    private let itemSize: CGSize
     private let viewModel: SortViewModelProtocol
 
     init(viewModel: SortViewModelProtocol) {
@@ -57,6 +62,7 @@ final class SortView: UIView {
 extension SortView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        self.delegate?.sortBy(viewModel.sortAt(indexPath))
     }
 }
 
@@ -74,12 +80,11 @@ extension SortView: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
-            as? SpeedCell else {
+            as? SortCell else {
                 return UICollectionViewCell()
         }
 
-        cell.bindData(viewModel.textFor(indexPath))
-        cell.setupTheme()
+        cell.bindData(viewModel.textAt(indexPath))
         return cell
     }
 }

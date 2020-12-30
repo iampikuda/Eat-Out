@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol RealmUpdateDelegate: class {
+    func gotInitialUpdate()
+    func reloadEverything()
+    func gotError(_ error: Error)
+}

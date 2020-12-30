@@ -3,7 +3,6 @@ use_modular_headers!
 
 target 'Eat Out' do
     pod 'RealmSwift'
-    pod 'SDWebImage'
     pod 'SnapKit', '~> 5.0.0'
     pod 'SwiftLint'
 

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct RestuarantMeta: Decodable {
+    let restaurants: [Restuarant]
+}

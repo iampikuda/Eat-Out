@@ -5,4 +5,12 @@
 //  Created by Damisi Pikuda on 30/12/2020.
 //
 
-import Foundation
+import UIKit
+
+extension UIStackView {
+    func addArrangedSubviews(_ views: [UIView]) {
+        for view in views {
+            addArrangedSubview(view)
+        }
+    }
+}
