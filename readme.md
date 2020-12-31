@@ -1,5 +1,7 @@
 # Eat Out  
 
+You can get a demo version of the app at [TestFlight Link](https://testflight.apple.com/join/IfRGOBnj)
+
 ## Introduction
 `Eat out` is a simple application that visializes a list of Restaurants gotten from the JSON file, `iOS sample.JSON`, on file.
 
@@ -38,3 +40,8 @@ Things to note:
 
 1. Run tests using the *iPhone 12 pro max* simulator
 2. Running the test for the first time is very likely to fail. Run again.
+
+### UITesting
+Things to note:
+
+1. Disconnect hardware keyboard on the simulator, if not some UITests may fail

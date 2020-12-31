@@ -67,14 +67,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D8887E4154475CA9C646E47A6272DBF5 /* PBXContainerItemProxy */ = {
+		D49E1BA854876F37FF62BD6EF85ADF94 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C10DEFDE477E4BB7954235BF33B5DFB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4F1D848F33039D5AD101C4EE4A303C2C;
 			remoteInfo = "Eat Out";
 		};
-		D49E1BA854876F37FF62BD6EF85ADF94 /* PBXContainerItemProxy */ = {
+		D8887E4154475CA9C646E47A6272DBF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C10DEFDE477E4BB7954235BF33B5DFB /* Project object */;
 			proxyType = 1;
@@ -153,14 +153,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DC8BAE81D28BFB5ECE07C1E9C56E3EE0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04466685A228285A55BF1037B5535027 /* libPods-Eat Out.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		02D355A7C735F813EC15DE55EE8FBBC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,38 +169,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC8BAE81D28BFB5ECE07C1E9C56E3EE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04466685A228285A55BF1037B5535027 /* libPods-Eat Out.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EBACC9BBCF66D252BA2C6DB28B773569 /* TestClasses */ = {
+		0158A65043D7FB77942F0787A7A12AB6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				1C0BD48B86248886748ED756873063CD /* CacheSpyDelegate.swift */,
-				BCA12D637B73F532EED7B6CC58E983D2 /* TestCacheSerive.swift */,
-				A2CEE4A74469283A51EE0C587E15B6A6 /* TestHomeViewModel.swift */,
+				8B4DF0CD5FBA11A9A626CBF2CF2838F1 /* Home */,
 			);
-			path = TestClasses;
-			sourceTree = "<group>";
-		};
-		9DB4E22C7047E8B678388B995B7761D4 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				7A73FFCFCCE22999D44E314BCB282E90 /* CacheServiceTests.swift */,
-				699A9C08669847901D447A2E8EBFDAB9 /* JsonServiceTests.swift */,
-				C291B3A6B5781C6C04AB88A568020E0E /* RealmServiceTests.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		D85AADF0CAD986A623E2C0684FF7E46B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0CB50170240B03B20C49CFBBE08585F1 /* CostLevelTests.swift */,
-				7A9C5458A297F0D86D70A1AEBCCF53D6 /* RestuarantStatusTests.swift */,
-				9468F711F382636E358C68254C548C89 /* RestuarantTests.swift */,
-				93E9E48DE1B4241F9B22F05AEBC37B87 /* SorterTests.swift */,
-			);
-			path = Models;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		1EBCBF3ADCEE5C897EF64D3FA2334EE9 /* ViewModel */ = {
@@ -219,47 +196,25 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		61CDFA5863A64377DF49E1F6E12C9193 /* Supporting Files */ = {
+		2DF2F1A932E14763F49469FAF11BB620 /* SnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
-				1B98F8EE04C1CC200913D230BDE923C5 /* Assets.xcassets */,
-				4742308151B2FCF7075B66F01584B9D8 /* Info.plist */,
-				8C83ED884593193682A9567EAD4B35E1 /* LaunchScreen.storyboard */,
-				4838325E06444BC6DB846EA1EE3F0E4C /* TestingService.swift */,
-				37F619B559A34464D75DBF9FB92A1E21 /* iOS bad sample.json */,
-				8E72A649FBE0713F447EBB6639FF1E0E /* iOS sample.json */,
+				33E04F022BAE3D738EAD83DB04E14157 /* EOSnapshotTest.swift */,
+				90F7FB96393F112F15022D271DA7B20C /* HomeViewControllerSnapshotTests.swift */,
 			);
-			path = "Supporting Files";
+			path = SnapshotTests;
 			sourceTree = "<group>";
 		};
-		0158A65043D7FB77942F0787A7A12AB6 /* Modules */ = {
+		3BAAD0EB2C4E0A951EA322E5AE62AC86 = {
 			isa = PBXGroup;
 			children = (
-				8B4DF0CD5FBA11A9A626CBF2CF2838F1 /* Home */,
+				CF261B1A066F753F91CD68788BA49A17 /* Eat Out */,
+				7118F91B8CF60B092FFF061F41CCAF3E /* Eat OutTests */,
+				D83AB40CE8F4E36AD8DBFB1DE2237312 /* Eat OutUITests */,
+				6031C47159FD135133A13E17191BFA99 /* Frameworks */,
+				697F0128B4FE4E5D16F7D89399BE6F3C /* Pods */,
+				EAE96E93DDFABCCE74BA2903DF6A10F2 /* Products */,
 			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		8B4DF0CD5FBA11A9A626CBF2CF2838F1 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				7E3FD3E5D6B2A90A3A351D4AC958E60B /* Components */,
-				890C0431AF023EBCF1D1D94F5CE8D28F /* HomeViewController.swift */,
-				560B1A043DC15EF631A59DC35CBAB2D4 /* HomeViewModel.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		E75FB5250BE238203CC0CCD6A7660773 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9C6909165410FC4209289F888245001E /* CostLevel.swift */,
-				492995AE5E419DA43177D6AF0004CA8E /* Restuarant.swift */,
-				920F252272F0DB1D47E3DF0EB625F85C /* RestuarantMeta.swift */,
-				918B97332AB5986D90C20ED35C580564 /* RestuarantStatus.swift */,
-				582421D4CB730E5003050E3BC5A28311 /* Sorter.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		49F1B35421C0D04BB2591158B2D7BF39 /* Services */ = {
@@ -289,19 +244,53 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		F494E6C0ED03497AD9C9FE1DAC269690 /* Extensions */ = {
+		6031C47159FD135133A13E17191BFA99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A39018036D6DFD57D0FFF15EA96DB894 /* CALayer+Utils.swift */,
-				C355AC66DB52A9D9625A3B8069813BD5 /* NSMutableAttributedString+Utils.swift */,
-				5FC96E99BA979E3E37472D3E1350E406 /* String+Utils.swift */,
-				A933515ACADE3E0681AF628FF3026FC4 /* UIColor+Utils.swift */,
-				4146BA5C7D23E8675340816B69D4D7FB /* UIImage+Utils.swift */,
-				E28D1B23A62D33247EEE2E3FFFC48310 /* UIStackView+Utils.swift */,
-				9E1A2534F82B17A6CBCDBD5773E26496 /* UIView+Utils.swift */,
-				035260A7A0AF11664E29DA6D38AC3EC2 /* UIViewController+Utils.swift */,
+				D40A4B4BAAB3D5CF07953C187813FF77 /* libPods-Eat Out-Eat OutUITests.a */,
+				85901FDD9B3F8A5A667836808F39DE0D /* libPods-Eat Out.a */,
+				55E883C87B28D2C0135EF69A940EECBA /* libPods-Eat OutTests.a */,
 			);
-			path = Extensions;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61CDFA5863A64377DF49E1F6E12C9193 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B98F8EE04C1CC200913D230BDE923C5 /* Assets.xcassets */,
+				4742308151B2FCF7075B66F01584B9D8 /* Info.plist */,
+				8C83ED884593193682A9567EAD4B35E1 /* LaunchScreen.storyboard */,
+				4838325E06444BC6DB846EA1EE3F0E4C /* TestingService.swift */,
+				37F619B559A34464D75DBF9FB92A1E21 /* iOS bad sample.json */,
+				8E72A649FBE0713F447EBB6639FF1E0E /* iOS sample.json */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		697F0128B4FE4E5D16F7D89399BE6F3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				204859993A16ECC86FE602A1517F75E4 /* Pods-Eat Out-Eat OutUITests.debug.xcconfig */,
+				79ECE370A42585D1D609A0666BE9B3C0 /* Pods-Eat Out-Eat OutUITests.release.xcconfig */,
+				E23F9B85113A3D197E577E9FD8D59003 /* Pods-Eat Out.debug.xcconfig */,
+				804C0F990D229EDB7E1D9292272BCE75 /* Pods-Eat Out.release.xcconfig */,
+				D2FC2DF2E752B07F949D39906ECA602C /* Pods-Eat OutTests.debug.xcconfig */,
+				24404463BA398B917FE413E185B9965C /* Pods-Eat OutTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7118F91B8CF60B092FFF061F41CCAF3E /* Eat OutTests */ = {
+			isa = PBXGroup;
+			children = (
+				D85AADF0CAD986A623E2C0684FF7E46B /* Models */,
+				9DB4E22C7047E8B678388B995B7761D4 /* Services */,
+				2DF2F1A932E14763F49469FAF11BB620 /* SnapshotTests */,
+				EBACC9BBCF66D252BA2C6DB28B773569 /* TestClasses */,
+				1EBCBF3ADCEE5C897EF64D3FA2334EE9 /* ViewModel */,
+				13FD659ABE3DF83FEAE9A3CB20E719F1 /* Info.plist */,
+			);
+			path = "Eat OutTests";
 			sourceTree = "<group>";
 		};
 		7E3FD3E5D6B2A90A3A351D4AC958E60B /* Components */ = {
@@ -316,45 +305,24 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		D09207A45E3FA3D0C5FC3D562036E7AD /* SortCollectionView */ = {
+		8B4DF0CD5FBA11A9A626CBF2CF2838F1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B0FDAEC3C0DA822E34F320CC9F32F80D /* SortCell.swift */,
-				1A181E22D3850CE2F89DF8BBB5C0B73A /* SortView.swift */,
-				8C829B1605626229AA8C101DE6D82953 /* SortViewModel.swift */,
+				7E3FD3E5D6B2A90A3A351D4AC958E60B /* Components */,
+				890C0431AF023EBCF1D1D94F5CE8D28F /* HomeViewController.swift */,
+				560B1A043DC15EF631A59DC35CBAB2D4 /* HomeViewModel.swift */,
 			);
-			path = SortCollectionView;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		2DF2F1A932E14763F49469FAF11BB620 /* SnapshotTests */ = {
+		9DB4E22C7047E8B678388B995B7761D4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				33E04F022BAE3D738EAD83DB04E14157 /* EOSnapshotTest.swift */,
-				90F7FB96393F112F15022D271DA7B20C /* HomeViewControllerSnapshotTests.swift */,
+				7A73FFCFCCE22999D44E314BCB282E90 /* CacheServiceTests.swift */,
+				699A9C08669847901D447A2E8EBFDAB9 /* JsonServiceTests.swift */,
+				C291B3A6B5781C6C04AB88A568020E0E /* RealmServiceTests.swift */,
 			);
-			path = SnapshotTests;
-			sourceTree = "<group>";
-		};
-		3BAAD0EB2C4E0A951EA322E5AE62AC86 = {
-			isa = PBXGroup;
-			children = (
-				CF261B1A066F753F91CD68788BA49A17 /* Eat Out */,
-				7118F91B8CF60B092FFF061F41CCAF3E /* Eat OutTests */,
-				D83AB40CE8F4E36AD8DBFB1DE2237312 /* Eat OutUITests */,
-				6031C47159FD135133A13E17191BFA99 /* Frameworks */,
-				697F0128B4FE4E5D16F7D89399BE6F3C /* Pods */,
-				EAE96E93DDFABCCE74BA2903DF6A10F2 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		EAE96E93DDFABCCE74BA2903DF6A10F2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				74EB6EC01CF0FDB8B9E00A7E8021051D /* Eat Out.app */,
-				E73AE784650DBFE1F7DA37E9F1834F78 /* Eat OutTests.xctest */,
-				4FF3E8F6D6DA987D6C118B0CE41DC670 /* Eat OutUITests.xctest */,
-			);
-			name = Products;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		CF261B1A066F753F91CD68788BA49A17 /* Eat Out */ = {
@@ -375,17 +343,14 @@
 			path = "Eat Out";
 			sourceTree = "<group>";
 		};
-		7118F91B8CF60B092FFF061F41CCAF3E /* Eat OutTests */ = {
+		D09207A45E3FA3D0C5FC3D562036E7AD /* SortCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				D85AADF0CAD986A623E2C0684FF7E46B /* Models */,
-				9DB4E22C7047E8B678388B995B7761D4 /* Services */,
-				2DF2F1A932E14763F49469FAF11BB620 /* SnapshotTests */,
-				EBACC9BBCF66D252BA2C6DB28B773569 /* TestClasses */,
-				1EBCBF3ADCEE5C897EF64D3FA2334EE9 /* ViewModel */,
-				13FD659ABE3DF83FEAE9A3CB20E719F1 /* Info.plist */,
+				B0FDAEC3C0DA822E34F320CC9F32F80D /* SortCell.swift */,
+				1A181E22D3850CE2F89DF8BBB5C0B73A /* SortView.swift */,
+				8C829B1605626229AA8C101DE6D82953 /* SortViewModel.swift */,
 			);
-			path = "Eat OutTests";
+			path = SortCollectionView;
 			sourceTree = "<group>";
 		};
 		D83AB40CE8F4E36AD8DBFB1DE2237312 /* Eat OutUITests */ = {
@@ -397,27 +362,62 @@
 			path = "Eat OutUITests";
 			sourceTree = "<group>";
 		};
-		6031C47159FD135133A13E17191BFA99 /* Frameworks */ = {
+		D85AADF0CAD986A623E2C0684FF7E46B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D40A4B4BAAB3D5CF07953C187813FF77 /* libPods-Eat Out-Eat OutUITests.a */,
-				85901FDD9B3F8A5A667836808F39DE0D /* libPods-Eat Out.a */,
-				55E883C87B28D2C0135EF69A940EECBA /* libPods-Eat OutTests.a */,
+				0CB50170240B03B20C49CFBBE08585F1 /* CostLevelTests.swift */,
+				7A9C5458A297F0D86D70A1AEBCCF53D6 /* RestuarantStatusTests.swift */,
+				9468F711F382636E358C68254C548C89 /* RestuarantTests.swift */,
+				93E9E48DE1B4241F9B22F05AEBC37B87 /* SorterTests.swift */,
 			);
-			name = Frameworks;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		697F0128B4FE4E5D16F7D89399BE6F3C /* Pods */ = {
+		E75FB5250BE238203CC0CCD6A7660773 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				204859993A16ECC86FE602A1517F75E4 /* Pods-Eat Out-Eat OutUITests.debug.xcconfig */,
-				79ECE370A42585D1D609A0666BE9B3C0 /* Pods-Eat Out-Eat OutUITests.release.xcconfig */,
-				E23F9B85113A3D197E577E9FD8D59003 /* Pods-Eat Out.debug.xcconfig */,
-				804C0F990D229EDB7E1D9292272BCE75 /* Pods-Eat Out.release.xcconfig */,
-				D2FC2DF2E752B07F949D39906ECA602C /* Pods-Eat OutTests.debug.xcconfig */,
-				24404463BA398B917FE413E185B9965C /* Pods-Eat OutTests.release.xcconfig */,
+				9C6909165410FC4209289F888245001E /* CostLevel.swift */,
+				492995AE5E419DA43177D6AF0004CA8E /* Restuarant.swift */,
+				920F252272F0DB1D47E3DF0EB625F85C /* RestuarantMeta.swift */,
+				918B97332AB5986D90C20ED35C580564 /* RestuarantStatus.swift */,
+				582421D4CB730E5003050E3BC5A28311 /* Sorter.swift */,
 			);
-			path = Pods;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAE96E93DDFABCCE74BA2903DF6A10F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74EB6EC01CF0FDB8B9E00A7E8021051D /* Eat Out.app */,
+				E73AE784650DBFE1F7DA37E9F1834F78 /* Eat OutTests.xctest */,
+				4FF3E8F6D6DA987D6C118B0CE41DC670 /* Eat OutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBACC9BBCF66D252BA2C6DB28B773569 /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1C0BD48B86248886748ED756873063CD /* CacheSpyDelegate.swift */,
+				BCA12D637B73F532EED7B6CC58E983D2 /* TestCacheSerive.swift */,
+				A2CEE4A74469283A51EE0C587E15B6A6 /* TestHomeViewModel.swift */,
+			);
+			path = TestClasses;
+			sourceTree = "<group>";
+		};
+		F494E6C0ED03497AD9C9FE1DAC269690 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A39018036D6DFD57D0FFF15EA96DB894 /* CALayer+Utils.swift */,
+				C355AC66DB52A9D9625A3B8069813BD5 /* NSMutableAttributedString+Utils.swift */,
+				5FC96E99BA979E3E37472D3E1350E406 /* String+Utils.swift */,
+				A933515ACADE3E0681AF628FF3026FC4 /* UIColor+Utils.swift */,
+				4146BA5C7D23E8675340816B69D4D7FB /* UIImage+Utils.swift */,
+				E28D1B23A62D33247EEE2E3FFFC48310 /* UIStackView+Utils.swift */,
+				9E1A2534F82B17A6CBCDBD5773E26496 /* UIView+Utils.swift */,
+				035260A7A0AF11664E29DA6D38AC3EC2 /* UIViewController+Utils.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,17 +523,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8987F04E29BFF32C77E0CD0941552A80 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				783E11190B0D0D0BE5BA1974E2B7DECF /* Assets.xcassets in Resources */,
-				67871696E04C3888567D352B7A34B849 /* LaunchScreen.storyboard in Resources */,
-				002FADCA8602972C092B777963AB0C70 /* iOS sample.json in Resources */,
-				9B518A00976A3D531E31B0AD422BA3BE /* readme.md in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D3EE7F6EC39604AC69F12DCE0765F18 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -548,27 +537,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8987F04E29BFF32C77E0CD0941552A80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				783E11190B0D0D0BE5BA1974E2B7DECF /* Assets.xcassets in Resources */,
+				67871696E04C3888567D352B7A34B849 /* LaunchScreen.storyboard in Resources */,
+				002FADCA8602972C092B777963AB0C70 /* iOS sample.json in Resources */,
+				9B518A00976A3D531E31B0AD422BA3BE /* readme.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CCDABBE03493486E6C961CF7D353A5B5 /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
 		0BFEBE667B08E1FB09A18A08276BF17C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -635,9 +617,59 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CCDABBE03493486E6C961CF7D353A5B5 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		25AF24BC96D2EC437F8B1DC99CDFD01C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C0C33BA51F27288440DFC23FD31A2A /* CacheServiceTests.swift in Sources */,
+				88AADB83C2DBB70CD33823199806C990 /* CacheSpyDelegate.swift in Sources */,
+				DCA716170D5B2B229985B8C8DC3C011D /* CostLevelTests.swift in Sources */,
+				0D7578AE8DA0D38E8F2BFC5CCA7F61A2 /* EOSnapshotTest.swift in Sources */,
+				EED6A17E15DD8E5E9B72E63EF74024A8 /* HomeViewControllerSnapshotTests.swift in Sources */,
+				A166075B2D0687B5A48847D7E31D4871 /* HomeViewModelTests.swift in Sources */,
+				0C29E0843D8CC90AFAE57B17FBEC9F3C /* JsonServiceTests.swift in Sources */,
+				3CB283DFDEF29DCE536ED654674E3631 /* RealmServiceTests.swift in Sources */,
+				42BD146B5909C597C9F7FF2C674FF526 /* RestuarantStatusTests.swift in Sources */,
+				2022F3E5A4C9FEDBECDA09995CC18DD2 /* RestuarantTests.swift in Sources */,
+				30985FFAC3916B3275E646A290F8AB9B /* SorterTests.swift in Sources */,
+				A1F416D71E5FB639C81FD004C56D838D /* TestCacheSerive.swift in Sources */,
+				75403047DDA9AA38CE88883D6C2EA533 /* TestHomeViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59EA8095D7516DAAF4C79C6D69D97769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202DB58C25F3987DD1FED3BC039EB3B7 /* Eat_OutUITests.swift in Sources */,
+				D688B9F34AFF54DD190859D4C612F6BD /* RestuarantStatus.swift in Sources */,
+				B8790326966503C6042E6446D0226694 /* Sorter.swift in Sources */,
+				61FCA2143A27803F1B23F05D1A54DB9A /* TestIdentifiers.swift in Sources */,
+				5CC1851469E4B6ED9EA0629B3B4FC45F /* UIColor+Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAB69519C5F58E2FE84E06EC4167E7A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -677,50 +709,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25AF24BC96D2EC437F8B1DC99CDFD01C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B8C0C33BA51F27288440DFC23FD31A2A /* CacheServiceTests.swift in Sources */,
-				88AADB83C2DBB70CD33823199806C990 /* CacheSpyDelegate.swift in Sources */,
-				DCA716170D5B2B229985B8C8DC3C011D /* CostLevelTests.swift in Sources */,
-				0D7578AE8DA0D38E8F2BFC5CCA7F61A2 /* EOSnapshotTest.swift in Sources */,
-				EED6A17E15DD8E5E9B72E63EF74024A8 /* HomeViewControllerSnapshotTests.swift in Sources */,
-				A166075B2D0687B5A48847D7E31D4871 /* HomeViewModelTests.swift in Sources */,
-				0C29E0843D8CC90AFAE57B17FBEC9F3C /* JsonServiceTests.swift in Sources */,
-				3CB283DFDEF29DCE536ED654674E3631 /* RealmServiceTests.swift in Sources */,
-				42BD146B5909C597C9F7FF2C674FF526 /* RestuarantStatusTests.swift in Sources */,
-				2022F3E5A4C9FEDBECDA09995CC18DD2 /* RestuarantTests.swift in Sources */,
-				30985FFAC3916B3275E646A290F8AB9B /* SorterTests.swift in Sources */,
-				A1F416D71E5FB639C81FD004C56D838D /* TestCacheSerive.swift in Sources */,
-				75403047DDA9AA38CE88883D6C2EA533 /* TestHomeViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59EA8095D7516DAAF4C79C6D69D97769 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				202DB58C25F3987DD1FED3BC039EB3B7 /* Eat_OutUITests.swift in Sources */,
-				D688B9F34AFF54DD190859D4C612F6BD /* RestuarantStatus.swift in Sources */,
-				B8790326966503C6042E6446D0226694 /* Sorter.swift in Sources */,
-				61FCA2143A27803F1B23F05D1A54DB9A /* TestIdentifiers.swift in Sources */,
-				5CC1851469E4B6ED9EA0629B3B4FC45F /* UIColor+Utils.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8B00BDE64C50BDD970B2243D8699BF61 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4F1D848F33039D5AD101C4EE4A303C2C /* Eat Out */;
-			targetProxy = D8887E4154475CA9C646E47A6272DBF5 /* PBXContainerItemProxy */;
-		};
 		54482E86913AC3E62A872AB79B29C880 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4F1D848F33039D5AD101C4EE4A303C2C /* Eat Out */;
 			targetProxy = D49E1BA854876F37FF62BD6EF85ADF94 /* PBXContainerItemProxy */;
+		};
+		8B00BDE64C50BDD970B2243D8699BF61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F1D848F33039D5AD101C4EE4A303C2C /* Eat Out */;
+			targetProxy = D8887E4154475CA9C646E47A6272DBF5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -736,6 +736,110 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		007B4FCA61D7323726957B11119DEC42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 804C0F990D229EDB7E1D9292272BCE75 /* Pods-Eat Out.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = "Eat Out/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-Out";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		45DF69858ECD59BFFB77D69A3D2CE150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79ECE370A42585D1D609A0666BE9B3C0 /* Pods-Eat Out-Eat OutUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = "Eat OutUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-OutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Eat Out";
+			};
+			name = Release;
+		};
+		6C9ECB41BADB26C03E97783259693DFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E23F9B85113A3D197E577E9FD8D59003 /* Pods-Eat Out.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = "Eat Out/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-Out";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A7FA38A4F8C1F1F62C5CD7E90A5E32D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204859993A16ECC86FE602A1517F75E4 /* Pods-Eat Out-Eat OutUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = "Eat OutUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-OutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Eat Out";
+			};
+			name = Debug;
+		};
+		C65F3FC6EC5CE00359279088E00B70AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2FC2DF2E752B07F949D39906ECA602C /* Pods-Eat OutTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = "Eat OutTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-OutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eat Out.app/Eat Out";
+			};
+			name = Debug;
+		};
 		C99B690A42EF86A44EF4FF0540749D7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -796,6 +900,28 @@
 			};
 			name = Debug;
 		};
+		E492F88FE6E0F0BE86FB87084CF934AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24404463BA398B917FE413E185B9965C /* Pods-Eat OutTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
+				INFOPLIST_FILE = "Eat OutTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-OutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eat Out.app/Eat Out";
+			};
+			name = Release;
+		};
 		F517E553BEFB5DDD5B384BEEA49E0CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -850,147 +976,23 @@
 			};
 			name = Release;
 		};
-		6C9ECB41BADB26C03E97783259693DFF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E23F9B85113A3D197E577E9FD8D59003 /* Pods-Eat Out.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
-				INFOPLIST_FILE = "Eat Out/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-Out";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		007B4FCA61D7323726957B11119DEC42 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 804C0F990D229EDB7E1D9292272BCE75 /* Pods-Eat Out.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
-				INFOPLIST_FILE = "Eat Out/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-Out";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		C65F3FC6EC5CE00359279088E00B70AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2FC2DF2E752B07F949D39906ECA602C /* Pods-Eat OutTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
-				INFOPLIST_FILE = "Eat OutTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-OutTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eat Out.app/Eat Out";
-			};
-			name = Debug;
-		};
-		E492F88FE6E0F0BE86FB87084CF934AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24404463BA398B917FE413E185B9965C /* Pods-Eat OutTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
-				INFOPLIST_FILE = "Eat OutTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-OutTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eat Out.app/Eat Out";
-			};
-			name = Release;
-		};
-		A7FA38A4F8C1F1F62C5CD7E90A5E32D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 204859993A16ECC86FE602A1517F75E4 /* Pods-Eat Out-Eat OutUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
-				INFOPLIST_FILE = "Eat OutUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-OutUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Eat Out";
-			};
-			name = Debug;
-		};
-		45DF69858ECD59BFFB77D69A3D2CE150 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79ECE370A42585D1D609A0666BE9B3C0 /* Pods-Eat Out-Eat OutUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CZ6MXJL9N;
-				INFOPLIST_FILE = "Eat OutUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "venoc.Eat-OutUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Eat Out";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7E5C63891360CEF53B7E2E14C0C942C8 /* Build configuration list for PBXProject "Eat Out" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C99B690A42EF86A44EF4FF0540749D7C /* Debug */,
-				F517E553BEFB5DDD5B384BEEA49E0CF1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4845CCF19B90140FECE0A5C3D8CAA7F4 /* Build configuration list for PBXNativeTarget "Eat Out" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C9ECB41BADB26C03E97783259693DFF /* Debug */,
 				007B4FCA61D7323726957B11119DEC42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E5C63891360CEF53B7E2E14C0C942C8 /* Build configuration list for PBXProject "Eat Out" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99B690A42EF86A44EF4FF0540749D7C /* Debug */,
+				F517E553BEFB5DDD5B384BEEA49E0CF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

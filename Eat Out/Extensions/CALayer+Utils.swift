@@ -56,14 +56,7 @@ struct ShadowInfo: Equatable {
 }
 
 class ShadowView: UIView {
-    public var shadowInfo: ShadowInfo? = ShadowInfo.defaultDropShadow {
-        didSet {
-            DispatchQueue.main.async {
-                guard oldValue != self.shadowInfo else { return }
-                self.layer.applyShadow(self.shadowInfo, cornerRadius: self.layer.cornerRadius)
-            }
-        }
-    }
+    public var shadowInfo: ShadowInfo? = ShadowInfo.defaultDropShadow
 
     override var bounds: CGRect {
         didSet {

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 struct ImageDetails {
     let imageName: ImageName

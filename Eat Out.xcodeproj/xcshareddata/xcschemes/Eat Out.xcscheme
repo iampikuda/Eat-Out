@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01FC3E60259C75D40053E372"
+               BlueprintIdentifier = "4F1D848F33039D5AD101C4EE4A303C2C"
                BuildableName = "Eat Out.app"
                BlueprintName = "Eat Out"
                ReferencedContainer = "container:Eat Out.xcodeproj">
@@ -26,13 +26,24 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4F1D848F33039D5AD101C4EE4A303C2C"
+            BuildableName = "Eat Out.app"
+            BlueprintName = "Eat Out"
+            ReferencedContainer = "container:Eat Out.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01FC3E76259C75D70053E372"
+               BlueprintIdentifier = "87F538F265254E465F77D67D6A7D61A1"
                BuildableName = "Eat OutTests.xctest"
                BlueprintName = "Eat OutTests"
                ReferencedContainer = "container:Eat Out.xcodeproj">
@@ -47,7 +58,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01FC3E81259C75D70053E372"
+               BlueprintIdentifier = "AB89A5CFAD0872AF48F5294E16D503A8"
                BuildableName = "Eat OutUITests.xctest"
                BlueprintName = "Eat OutUITests"
                ReferencedContainer = "container:Eat Out.xcodeproj">
@@ -69,7 +80,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "01FC3E60259C75D40053E372"
+            BlueprintIdentifier = "4F1D848F33039D5AD101C4EE4A303C2C"
             BuildableName = "Eat Out.app"
             BlueprintName = "Eat Out"
             ReferencedContainer = "container:Eat Out.xcodeproj">
@@ -86,7 +97,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "01FC3E60259C75D40053E372"
+            BlueprintIdentifier = "4F1D848F33039D5AD101C4EE4A303C2C"
             BuildableName = "Eat Out.app"
             BlueprintName = "Eat Out"
             ReferencedContainer = "container:Eat Out.xcodeproj">
