@@ -8,23 +8,9 @@
 import UIKit
 
 extension UIViewController {
-
-    func dismissKeyboardOn(target: UIView) {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        tapGesture.cancelsTouchesInView = false
-        target.isUserInteractionEnabled = true
-        target.addGestureRecognizer(tapGesture)
-    }
-
-    @objc private func dismissKeyboard(gestureRecognizer: UITapGestureRecognizer) {
-        self.view.endEditing(true)
-    }
-
     @objc func showAlertWithOkAction(
         title: String,
-        message: String,
-        addCancel: Bool = false,
-        completion: ((UIAlertAction) -> Void)? = nil
+        message: String
     ) {
         let alert = UIAlertController(
             title: title,
@@ -32,27 +18,13 @@ extension UIViewController {
             preferredStyle: .alert
         )
 
-        var handler: ((UIAlertAction) -> Void)?
-
-        if let completion = completion {
-            handler = completion
-        }
-
-        let action  = UIAlertAction(
-            title: "OK",
-            style: .default,
-            handler: handler)
-
-        alert.addAction(action)
-
-        if addCancel {
-            let cancelAction  = UIAlertAction(
-                title: "Cancel",
-                style: .cancel,
-                handler: nil)
-
-            alert.addAction(cancelAction)
-        }
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: .default,
+                handler: nil
+            )
+        )
 
         self.present(alert, animated: true, completion: nil)
     }

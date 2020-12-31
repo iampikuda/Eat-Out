@@ -89,4 +89,3 @@ extension NSMutableAttributedString {
         return NSMutableAttributedString(string: text, attributes: attributes)
     }
 }
-

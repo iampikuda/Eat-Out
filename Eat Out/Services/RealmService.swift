@@ -8,14 +8,14 @@
 import RealmSwift
 
 enum Sorter: String, CaseIterable {
+    case bestMatch = "bestMatchValue"
     case averageProductPrice
-    case bestMatch
-    case deliveryCosts
+    case ratingAverage = "rating"
+    case deliveryCosts = "deliveryCost"
     case distance
-    case minCost
-    case newest
+    case minCost = "minimumCost"
+    case newest = "newestLevel"
     case popularity
-    case ratingAverage
 
     var sortText: String {
         switch self {
@@ -35,7 +35,7 @@ struct RealmService {
     static func getAll(from realm: Realm, sortBy: Sorter = .bestMatch, ascending: Bool = false) -> Results<Restuarant> {
         let results = realm.objects(Restuarant.self)
         return results.sorted(by: [
-            SortDescriptor(keyPath: "statusInt", ascending: false),
+            SortDescriptor(keyPath: "statusInt", ascending: true),
             SortDescriptor(keyPath: sortBy.rawValue, ascending: ascending)
         ])
     }
@@ -58,7 +58,7 @@ struct RealmService {
         }
     }
 
-    static func favouriteRestuarant(_ item: Restuarant, to realm: Realm) {
+    static func favouriteRestuarant(_ item: Restuarant, in realm: Realm) {
         // swiftlint:disable:next force_try
         try! realm.safeWrite {
             item.isFavourited.toggle()

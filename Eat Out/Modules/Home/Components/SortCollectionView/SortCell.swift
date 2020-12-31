@@ -10,7 +10,7 @@ import SnapKit
 
 final class SortCell: UICollectionViewCell {
 
-    private let content = UIView()
+    private let content = CircularView()
 
     override var isSelected: Bool {
         didSet {
@@ -29,9 +29,7 @@ final class SortCell: UICollectionViewCell {
         label.numberOfLines = 1
         label.textColor = .gray
         label.textAlignment = .center
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.5
-        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.font = UIFont.boldSystemFont(ofSize: 17)
         return label
     }()
 
@@ -46,21 +44,32 @@ final class SortCell: UICollectionViewCell {
     }
 
     func commonInit() {
+        backgroundColor = .white
         addSubviews([content, label])
         content.snp.makeConstraints { (make) in
-            make.left.equalTo(label).offset(2)
-            make.right.equalTo(label).offset(-2)
-            make.top.equalTo(label).offset(-2)
-            make.bottom.equalTo(label).offset(2)
+            make.left.equalTo(label).offset(-4)
+            make.right.equalTo(label).offset(4)
+            make.top.equalTo(label).offset(-4)
+            make.bottom.equalTo(label).offset(4)
         }
         label.snp.makeConstraints { (make) in
             make.centerX.centerY.equalTo(self)
             make.width.equalTo(self).multipliedBy(0.9)
         }
-
+        content.backgroundColor = .lightGray
+        label.textColor = .black
     }
 
     func bindData(_ text: String) {
         label.text = text
+    }
+}
+
+class CircularView: UIView {
+    override var bounds: CGRect {
+        didSet {
+            guard oldValue != bounds else { return }
+            self.layer.cornerRadius = self.frame.size.height / 2.0
+        }
     }
 }

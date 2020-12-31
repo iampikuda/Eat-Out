@@ -22,7 +22,6 @@
 		01BE6E00259D00B3002F0877 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6DFF259D00B3002F0877 /* HomeCollectionViewCell.swift */; };
 		01BE6E07259D02FD002F0877 /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E06259D02FD002F0877 /* ImageName.swift */; };
 		01BE6E10259D03EF002F0877 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E0F259D03EF002F0877 /* UIColor+Utils.swift */; };
-		01BE6E16259D0467002F0877 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E15259D0467002F0877 /* RatingView.swift */; };
 		01BE6E1E259D0583002F0877 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E1D259D0583002F0877 /* UIView+Utils.swift */; };
 		01BE6E26259D0861002F0877 /* CellBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E25259D0861002F0877 /* CellBottomView.swift */; };
 		01BE6E2B259D088F002F0877 /* UIStackView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E2A259D088F002F0877 /* UIStackView+Utils.swift */; };
@@ -35,8 +34,9 @@
 		01BE6E57259D1939002F0877 /* SortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E56259D1939002F0877 /* SortViewModel.swift */; };
 		01BE6E5F259D1DE7002F0877 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E5E259D1DE7002F0877 /* String+Utils.swift */; };
 		01BE6E64259D1E2A002F0877 /* TestingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E63259D1E2A002F0877 /* TestingService.swift */; };
-		01BE6E6C259D1EFF002F0877 /* UIBarButtonItem+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E6B259D1EFF002F0877 /* UIBarButtonItem+Utils.swift */; };
 		01BE6E76259D22B3002F0877 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E75259D22B3002F0877 /* UIViewController+Utils.swift */; };
+		01BE6E87259D3363002F0877 /* ImageTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E86259D3363002F0877 /* ImageTextLabel.swift */; };
+		01BE6E92259DB7B7002F0877 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E91259DB7B7002F0877 /* StatusView.swift */; };
 		01FC3E65259C75D40053E372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC3E64259C75D40053E372 /* AppDelegate.swift */; };
 		01FC3E67259C75D40053E372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC3E66259C75D40053E372 /* SceneDelegate.swift */; };
 		01FC3E6E259C75D60053E372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FC3E6D259C75D60053E372 /* Assets.xcassets */; };
@@ -81,7 +81,6 @@
 		01BE6DFF259D00B3002F0877 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		01BE6E06259D02FD002F0877 /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
 		01BE6E0F259D03EF002F0877 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
-		01BE6E15259D0467002F0877 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		01BE6E1D259D0583002F0877 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		01BE6E25259D0861002F0877 /* CellBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBottomView.swift; sourceTree = "<group>"; };
 		01BE6E2A259D088F002F0877 /* UIStackView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Utils.swift"; sourceTree = "<group>"; };
@@ -94,8 +93,9 @@
 		01BE6E56259D1939002F0877 /* SortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewModel.swift; sourceTree = "<group>"; };
 		01BE6E5E259D1DE7002F0877 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		01BE6E63259D1E2A002F0877 /* TestingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingService.swift; sourceTree = "<group>"; };
-		01BE6E6B259D1EFF002F0877 /* UIBarButtonItem+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Utils.swift"; sourceTree = "<group>"; };
 		01BE6E75259D22B3002F0877 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		01BE6E86259D3363002F0877 /* ImageTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextLabel.swift; sourceTree = "<group>"; };
+		01BE6E91259DB7B7002F0877 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		01FC3E61259C75D40053E372 /* Eat Out.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Out.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FC3E64259C75D40053E372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FC3E66259C75D40053E372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,7 +224,6 @@
 				01BE6E39259D0F93002F0877 /* CALayer+Utils.swift */,
 				01BE6E3E259D1288002F0877 /* UIImage+Utils.swift */,
 				01BE6E5E259D1DE7002F0877 /* String+Utils.swift */,
-				01BE6E6B259D1EFF002F0877 /* UIBarButtonItem+Utils.swift */,
 				01BE6E75259D22B3002F0877 /* UIViewController+Utils.swift */,
 			);
 			path = Extensions;
@@ -235,8 +234,9 @@
 			children = (
 				01BE6E55259D192A002F0877 /* SortCollectionView */,
 				01BE6DFF259D00B3002F0877 /* HomeCollectionViewCell.swift */,
-				01BE6E15259D0467002F0877 /* RatingView.swift */,
 				01BE6E25259D0861002F0877 /* CellBottomView.swift */,
+				01BE6E86259D3363002F0877 /* ImageTextLabel.swift */,
+				01BE6E91259DB7B7002F0877 /* StatusView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -249,6 +249,13 @@
 				01BE6E56259D1939002F0877 /* SortViewModel.swift */,
 			);
 			path = SortCollectionView;
+			sourceTree = "<group>";
+		};
+		01BE6E96259DC8CB002F0877 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SnapshotTests;
 			sourceTree = "<group>";
 		};
 		01FC3E58259C75D30053E372 = {
@@ -294,6 +301,7 @@
 		01FC3E7A259C75D70053E372 /* Eat OutTests */ = {
 			isa = PBXGroup;
 			children = (
+				01BE6E96259DC8CB002F0877 /* SnapshotTests */,
 				01FC3E7B259C75D70053E372 /* Eat_OutTests.swift */,
 				01FC3E7D259C75D70053E372 /* Info.plist */,
 			);
@@ -567,15 +575,15 @@
 				01BE6E2B259D088F002F0877 /* UIStackView+Utils.swift in Sources */,
 				01BE6E35259D0CB1002F0877 /* CostLevel.swift in Sources */,
 				01BE6E3A259D0F93002F0877 /* CALayer+Utils.swift in Sources */,
+				01BE6E87259D3363002F0877 /* ImageTextLabel.swift in Sources */,
+				01BE6E92259DB7B7002F0877 /* StatusView.swift in Sources */,
 				01BE6E44259D14F0002F0877 /* SortView.swift in Sources */,
 				01BE6E76259D22B3002F0877 /* UIViewController+Utils.swift in Sources */,
 				01BE6E30259D0BEF002F0877 /* NSMutableAttributedString+Utils.swift in Sources */,
-				01BE6E6C259D1EFF002F0877 /* UIBarButtonItem+Utils.swift in Sources */,
 				01BE6DF5259CBE8C002F0877 /* RestuarantMeta.swift in Sources */,
 				01BE6E49259D15D7002F0877 /* SortCell.swift in Sources */,
 				01BE6DF0259CBC97002F0877 /* CacheService.swift in Sources */,
 				01BE6DEB259CB314002F0877 /* RealmService.swift in Sources */,
-				01BE6E16259D0467002F0877 /* RatingView.swift in Sources */,
 				01BE6E26259D0861002F0877 /* CellBottomView.swift in Sources */,
 				01BE6D7A259C9182002F0877 /* HomeViewController.swift in Sources */,
 				01BE6E64259D1E2A002F0877 /* TestingService.swift in Sources */,

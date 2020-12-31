@@ -10,6 +10,7 @@ import SnapKit
 
 protocol SortDelegate: class {
     func sortBy(_ sorter: Sorter)
+    func changeOrder()
 }
 
 final class SortView: UIView {
@@ -17,23 +18,25 @@ final class SortView: UIView {
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
+        layout.scrollDirection = .horizontal
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.showsVerticalScrollIndicator = false
-        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .white
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         return collectionView
     }()
 
     private let cellIdentifier = "Sort-cell"
 
-    private var currentIndexPath = IndexPath(row: 0, section: 0)
+    private var selectedIndexPath = IndexPath(row: 0, section: 0)
 
     private let viewModel: SortViewModelProtocol
 
     init(viewModel: SortViewModelProtocol) {
         self.viewModel = viewModel
         super.init(frame: .zero)
+        backgroundColor = .white
 
         setupViews()
     }
@@ -57,12 +60,25 @@ final class SortView: UIView {
         collectionView.dataSource = self
         collectionView.register(SortCell.self, forCellWithReuseIdentifier: cellIdentifier)
     }
+
+    func initialize() {
+        collectionView.selectItem(
+            at: IndexPath(row: 0, section: 0),
+            animated: false,
+            scrollPosition: .centeredHorizontally
+        )
+    }
 }
 
 extension SortView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        self.delegate?.sortBy(viewModel.sortAt(indexPath))
+        if selectedIndexPath == indexPath {
+            self.delegate?.changeOrder()
+        } else {
+            self.delegate?.sortBy(viewModel.sortAt(indexPath))
+        }
+        selectedIndexPath = indexPath
     }
 }
 
@@ -86,5 +102,22 @@ extension SortView: UICollectionViewDataSource {
 
         cell.bindData(viewModel.textAt(indexPath))
         return cell
+    }
+}
+
+extension SortView: UICollectionViewDelegateFlowLayout {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        let width = viewModel.textAt(indexPath).boundingRect(
+            with: collectionView.frame.size,
+            options: [.usesLineFragmentOrigin, .usesFontLeading],
+            attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25)],
+            context: nil
+        ).width
+
+        return CGSize(width: width + 5, height: collectionView.frame.size.height)
     }
 }

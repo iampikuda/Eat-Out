@@ -5,7 +5,7 @@
 //  Created by Damisi Pikuda on 30/12/2020.
 //
 
-import Foundation
+import UIKit
 
 enum Status: Int {
     case open = 0
@@ -23,6 +23,30 @@ enum Status: Int {
         default:
             assertionFailure("Case does not exist, please add")
             self = .open
+        }
+    }
+
+    var text: String {
+        switch self {
+        case .open: return ""
+        case .orderAhead: return "ORDER AHEAD"
+        case .closed: return "CLOSED"
+        }
+    }
+
+    var isHidden: Bool {
+        switch self {
+        case .open: return true
+        case .orderAhead: return false
+        case .closed: return false
+        }
+    }
+
+    var color: UIColor {
+        switch self {
+        case .open: return .clear
+        case .orderAhead: return .primary
+        case .closed: return .red
         }
     }
 }
