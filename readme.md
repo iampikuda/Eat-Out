@@ -8,6 +8,9 @@
 2. The Restaurants can be further sorted by clicking on any of the sort options on the top vertical collection view
 3. Restaurants can be found by typing in a case-insensitive name in the search bar at the top. 
 
+## Design
+Find design inspiration at [Figma](https://www.figma.com/file/rjOjAkKlZ4pi6VgEU6y3B7/Eat-Out)
+
 ## Installing
 
 ### Prerequisites
