@@ -25,8 +25,8 @@ final class TestCacheSerive: CacheService {
     override func getRestaurants(from fileName: FileName) {
         do {
             let data = try JsonService().getRestaurantData(from: fileName)
-            let Restaurants = try JSONDecoder().decode(RestaurantMeta.self, from: data).restaurants
-            RealmService.save(Restaurants, to: self.realmInstance)
+            let restaurants = try JSONDecoder().decode(RestaurantMeta.self, from: data).restaurants
+            RealmService.save(restaurants, to: self.realmInstance)
         } catch {
             self.delegate?.gotError(error)
         }

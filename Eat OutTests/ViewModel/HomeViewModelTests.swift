@@ -36,13 +36,13 @@ class HomeViewModelTests: XCTestCase {
 
         XCTAssertEqual(all.filter({ $0.isFavourited == true }).count, 0)
 
-        let Restaurant = Restaurant(id: "1")
+        let restaurant = Restaurant(id: "1")
 
-        vm.favouriteResturant(Restaurant)
+        vm.favouriteResturant(restaurant)
 
         XCTAssertEqual(all.filter({ $0.isFavourited == true }).count, 1)
 
-        vm.favouriteResturant(Restaurant)
+        vm.favouriteResturant(restaurant)
 
         XCTAssertEqual(all.filter({ $0.isFavourited == true }).count, 0)
     }
@@ -55,10 +55,10 @@ class HomeViewModelTests: XCTestCase {
             return
         }
 
-        XCTAssertEqual(vm.RestaurantAt(IndexPath(row: 0, section: 0)).id, first.id)
+        XCTAssertEqual(vm.restaurantAt(IndexPath(row: 0, section: 0)).id, first.id)
 
         vm.filterText = "Dam"
-        XCTAssertNotEqual(vm.RestaurantAt(IndexPath(row: 0, section: 0)).id, first.id)
+        XCTAssertNotEqual(vm.restaurantAt(IndexPath(row: 0, section: 0)).id, first.id)
     }
 
     func testFilteredArray() {

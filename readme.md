@@ -21,10 +21,10 @@ Xcode 12 or above
 4. `open open Eat\ Out.xcworkspace/`
 
 ## Pods
-1. `RealmSwift` : Serves as the database
-2. `SnapKit` : A wrapper to help with auto layout 
-3. `SwiftLint` : A linter to keep the code clean
-4. `SnapshotTesting` : A snapshot testing library
+1. `RealmSwift`: Serves as the database
+2. `SnapKit`: A wrapper to help with auto layout 
+3. `SwiftLint`: A linter to keep the code clean
+4. `SnapshotTesting`: A snapshot testing library
 
 ## Testing
 
