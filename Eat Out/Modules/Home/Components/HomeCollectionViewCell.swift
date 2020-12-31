@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 protocol CellDelegate: class {
-    func favourited(restuarant: Restuarant)
+    func favourited(restaurant: Restaurant)
 }
 
 final class HomeCollectionViewCell: UICollectionViewCell {
@@ -21,12 +21,20 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         statusView.isHidden = true
     }
 
-    private let mainView = ShadowView()
-    private let bottomView: UIView = {
-        let view = UIView()
-        view.addCorners(radius: 12, lr: true, ll: true)
+    private let mainView: ShadowView = {
+        let view = ShadowView()
+        view.addCorners(radius: 12, lr: true, ll: true, tr: true, tl: true)
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
+        view.clipsToBounds = true
+        view.backgroundColor = .white
+        return view
+    }()
+
+    private let bottomView: UIView = {
+        let view = UIView()
+        view.addTopBorder(with: UIColor.black.withAlphaComponent(0.1), andWidth: 1)
+        view.layer.cornerRadius = 12
         return view
     }()
 
@@ -48,17 +56,18 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.image = UIImage(imageName: .defaultLogo)
         imageView.clipsToBounds = true
-        imageView.layer.borderWidth = 1
-        imageView.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
-        imageView.addCorners(radius: 12, tr: true, tl: true)
+        imageView.layer.cornerRadius = 12
         return imageView
     }()
 
-    private let heartImage: UIImageView = {
+    private let heartImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.image = UIImage(imageName: .heart)?.withRenderingMode(.alwaysTemplate)
         imageView.tintColor = .primary
+        #if DEBUG
+        imageView.accessibilityIdentifier = TestIdentifiers.heartImageView.rawValue
+        #endif
         return imageView
     }()
 
@@ -71,6 +80,9 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 18)
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.8
+        #if DEBUG
+        label.accessibilityIdentifier = TestIdentifiers.homeCollectionViewCellNameLabel.rawValue
+        #endif
         return label
     }()
 
@@ -85,7 +97,7 @@ final class HomeCollectionViewCell: UICollectionViewCell {
 
     private let cellBottomView = CellBottomView()
 
-    var restuarant: Restuarant? {
+    var restaurant: Restaurant? {
         didSet {
             bindData()
         }
@@ -103,8 +115,6 @@ final class HomeCollectionViewCell: UICollectionViewCell {
 
     private func setupView() {
         addSubview(mainView)
-        mainView.clipsToBounds = true
-
         mainView.snp.makeConstraints { (make) in
             make.width.equalTo(self).multipliedBy(0.84)
             make.centerX.centerY.equalTo(self)
@@ -126,6 +136,9 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         }
 
         favouriteButton.addTarget(self, action: #selector(favouriteButtonPressed), for: .touchUpInside)
+        #if DEBUG
+        favouriteButton.accessibilityIdentifier = TestIdentifiers.favouriteButton.rawValue
+        #endif
     }
 
     private func setupTop() {
@@ -141,20 +154,20 @@ final class HomeCollectionViewCell: UICollectionViewCell {
             make.width.equalTo(imageView).multipliedBy(0.93)
         }
 
-        upperDetailView.addSubviews([ratingView, heartImage])
+        upperDetailView.addSubviews([ratingView, heartImageView])
         ratingView.snp.makeConstraints { (make) in
             make.left.top.bottom.equalTo(upperDetailView)
             make.width.equalTo(60)
         }
 
-        heartImage.snp.makeConstraints { (make) in
+        heartImageView.snp.makeConstraints { (make) in
             make.right.top.bottom.equalTo(upperDetailView)
-            make.width.equalTo(heartImage.snp.height)
+            make.width.equalTo(heartImageView.snp.height)
         }
 
         favouriteButton.snp.makeConstraints { (make) in
             make.height.width.equalTo(44)
-            make.centerX.centerY.equalTo(heartImage)
+            make.centerX.centerY.equalTo(heartImageView)
         }
     }
 
@@ -178,12 +191,12 @@ final class HomeCollectionViewCell: UICollectionViewCell {
     }
 
     @objc private func favouriteButtonPressed() {
-        guard let restuarant = restuarant else { return }
-        self.delegate?.favourited(restuarant: restuarant)
+        guard let restaurant = restaurant else { return }
+        self.delegate?.favourited(restaurant: restaurant)
     }
 
     private func bindData() {
-        guard let restuarant = restuarant else { return }
+        guard let restaurant = restaurant else { return }
         ratingView.setupLabel(
             withDetails: ImageTextDetails(
                 imageDetails: ImageDetails(
@@ -192,36 +205,40 @@ final class HomeCollectionViewCell: UICollectionViewCell {
                     imageOffset: -5.5
                 ),
                 textDetails: TextDetails(
-                    text: "\(restuarant.rating)",
+                    text: "\(restaurant.rating)",
                     textOffset: -3,
                     textFont: UIFont.boldSystemFont(ofSize: 18),
                     textColor: .primary
                 )
             )
         )
-        heartImage.image = restuarant.isFavourited ?
+        heartImageView.image = restaurant.isFavourited ?
             UIImage(imageName: .heartFilled)?.withRenderingMode(.alwaysTemplate) :
             UIImage(imageName: .heart)?.withRenderingMode(.alwaysTemplate)
 
         let attstring = NSMutableAttributedString()
             .withAttributes(
-                text: restuarant.name,
+                text: restaurant.name,
                 textColor: .black,
                 font: UIFont.systemFont(ofSize: 18)
             ).appendStringWithAttributes(
-                text: "· " + restuarant.costLevel.rawValue,
+                text: "· " + restaurant.costLevel.rawValue,
                 textColor: UIColor.black.withAlphaComponent(0.4),
                 font: UIFont.systemFont(ofSize: 18)
             )
         nameLabel.attributedText = attstring
 
         cellBottomView.setLabel(
-            mininum: restuarant.minimumCost,
-            delivery: restuarant.deliveryCost,
-            distance: restuarant.distance
+            mininum: restaurant.minimumCost,
+            delivery: restaurant.deliveryCost,
+            distance: restaurant.distance
         )
 
-        statusView.setStatus(restuarant.status)
-        overlayView.isHidden = restuarant.status != .closed
+        statusView.setStatus(restaurant.status)
+        overlayView.isHidden = restaurant.status != .closed
+
+        #if DEBUG
+        statusView.accessibilityIdentifier = TestIdentifiers.cellStatus(restaurant.status)
+        #endif
     }
 }

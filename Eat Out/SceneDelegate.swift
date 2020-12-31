@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,9 +18,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
+        guard !TestingService.isUnitTest else { return }
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
 
+        #if DEBUG
+        if TestingService.isUITest {
+            prepareForUITest()
+        }
+        #endif
         appCoordinator = AppCoordinator(window: window, cacheService: CacheService())
         appCoordinator.startApp()
 
@@ -40,5 +47,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
+    }
+}
+
+private extension SceneDelegate {
+    func prepareForUITest() {
+        do {
+            let realm = try Realm()
+            try realm.safeWrite {
+                realm.deleteAll()
+            }
+        } catch {}
     }
 }

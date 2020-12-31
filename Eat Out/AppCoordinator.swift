@@ -17,7 +17,7 @@ final class AppCoordinator {
         self.cacheService = cacheService
 
         self.cacheService.delegate = self
-        self.cacheService.getRestuarants()
+        self.cacheService.getRestaurants(from: .good)
     }
 
     final func startApp() {

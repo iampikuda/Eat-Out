@@ -39,6 +39,9 @@ final class SortView: UIView {
         backgroundColor = .white
 
         setupViews()
+        #if DEBUG
+        setupForUITest()
+        #endif
     }
 
     @available(*, unavailable)
@@ -101,6 +104,9 @@ extension SortView: UICollectionViewDataSource {
         }
 
         cell.bindData(viewModel.textAt(indexPath))
+        #if DEBUG
+        cell.accessibilityIdentifier = TestIdentifiers.sortCell(sorter: viewModel.sortAt(indexPath))
+        #endif
         return cell
     }
 }
@@ -121,3 +127,11 @@ extension SortView: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width + 5, height: collectionView.frame.size.height)
     }
 }
+
+#if DEBUG
+private extension SortView {
+    func setupForUITest() {
+        collectionView.accessibilityIdentifier = TestIdentifiers.sortCollectionView.rawValue
+    }
+}
+#endif

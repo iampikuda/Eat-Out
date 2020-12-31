@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01AD7DA8259DE18F0016AA05 /* TestCacheSerive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DA7259DE18F0016AA05 /* TestCacheSerive.swift */; };
+		01AD7DB0259DE2660016AA05 /* CacheSpyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DAF259DE2660016AA05 /* CacheSpyDelegate.swift */; };
+		01AD7DB5259DE4340016AA05 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DB4259DE4340016AA05 /* RealmServiceTests.swift */; };
+		01AD7DBF259DEE6C0016AA05 /* CostLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DBE259DEE6C0016AA05 /* CostLevelTests.swift */; };
+		01AD7DC7259DEFC00016AA05 /* RestuarantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DC6259DEFC00016AA05 /* RestuarantTests.swift */; };
+		01AD7DCC259DF0650016AA05 /* RestuarantStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DCB259DF0650016AA05 /* RestuarantStatusTests.swift */; };
+		01AD7DE1259DF9C20016AA05 /* TestHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DE0259DF9C20016AA05 /* TestHomeViewModel.swift */; };
+		01AD7DE6259E09FB0016AA05 /* TestIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DE5259E09FB0016AA05 /* TestIdentifiers.swift */; };
+		01AD7DEA259E09FF0016AA05 /* TestIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DE5259E09FB0016AA05 /* TestIdentifiers.swift */; };
+		01AD7DEF259E11360016AA05 /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DEE259E11360016AA05 /* Sorter.swift */; };
+		01AD7DF3259E11400016AA05 /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DEE259E11360016AA05 /* Sorter.swift */; };
+		01AD7DF8259E11830016AA05 /* SorterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD7DF7259E11830016AA05 /* SorterTests.swift */; };
+		01AD7E17259E1D500016AA05 /* RestuarantStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6D93259CA58B002F0877 /* RestuarantStatus.swift */; };
+		01AD7E1B259E1D640016AA05 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E0F259D03EF002F0877 /* UIColor+Utils.swift */; };
 		01BE6D31259C82B9002F0877 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6D30259C82B9002F0877 /* AppCoordinator.swift */; };
 		01BE6D75259C9179002F0877 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6D74259C9179002F0877 /* HomeViewModel.swift */; };
 		01BE6D7A259C9182002F0877 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6D79259C9182002F0877 /* HomeViewController.swift */; };
 		01BE6D82259C962E002F0877 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6D81259C962E002F0877 /* readme.md */; };
 		01BE6D8C259CA4EE002F0877 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6D8B259CA4EE002F0877 /* Restuarant.swift */; };
-		01BE6D94259CA58B002F0877 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6D93259CA58B002F0877 /* Status.swift */; };
+		01BE6D94259CA58B002F0877 /* RestuarantStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6D93259CA58B002F0877 /* RestuarantStatus.swift */; };
 		01BE6DDA259CAD53002F0877 /* iOS sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6DD9259CAD53002F0877 /* iOS sample.json */; };
 		01BE6DE3259CAE5E002F0877 /* JsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6DE2259CAE5E002F0877 /* JsonService.swift */; };
 		01BE6DEB259CB314002F0877 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6DEA259CB314002F0877 /* RealmService.swift */; };
@@ -37,11 +51,15 @@
 		01BE6E76259D22B3002F0877 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E75259D22B3002F0877 /* UIViewController+Utils.swift */; };
 		01BE6E87259D3363002F0877 /* ImageTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E86259D3363002F0877 /* ImageTextLabel.swift */; };
 		01BE6E92259DB7B7002F0877 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E91259DB7B7002F0877 /* StatusView.swift */; };
+		01BE6E98259DC915002F0877 /* EOSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E97259DC915002F0877 /* EOSnapshotTest.swift */; };
+		01BE6EA0259DCA9A002F0877 /* HomeViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6E9F259DCA9A002F0877 /* HomeViewControllerSnapshotTests.swift */; };
+		01D9BAED259DD059004DD29B /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BAEC259DD059004DD29B /* HomeViewModelTests.swift */; };
+		01D9BAF5259DD117004DD29B /* CacheServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BAF4259DD117004DD29B /* CacheServiceTests.swift */; };
+		01D9BAFE259DD17B004DD29B /* JsonServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BAFD259DD17B004DD29B /* JsonServiceTests.swift */; };
 		01FC3E65259C75D40053E372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC3E64259C75D40053E372 /* AppDelegate.swift */; };
 		01FC3E67259C75D40053E372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC3E66259C75D40053E372 /* SceneDelegate.swift */; };
 		01FC3E6E259C75D60053E372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FC3E6D259C75D60053E372 /* Assets.xcassets */; };
 		01FC3E71259C75D60053E372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC3E6F259C75D60053E372 /* LaunchScreen.storyboard */; };
-		01FC3E7C259C75D70053E372 /* Eat_OutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC3E7B259C75D70053E372 /* Eat_OutTests.swift */; };
 		01FC3E87259C75D70053E372 /* Eat_OutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC3E86259C75D70053E372 /* Eat_OutUITests.swift */; };
 		78984FC37E0F0646DEC1F2B7 /* libPods-Eat Out-Eat OutUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B6D27E718AF41E04C01FB9 /* libPods-Eat Out-Eat OutUITests.a */; };
 		A65B4727BA738E2FCF415F15 /* libPods-Eat Out.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC212E94780124CADA44341A /* libPods-Eat Out.a */; };
@@ -66,12 +84,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01AD7DA7259DE18F0016AA05 /* TestCacheSerive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCacheSerive.swift; sourceTree = "<group>"; };
+		01AD7DAF259DE2660016AA05 /* CacheSpyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheSpyDelegate.swift; sourceTree = "<group>"; };
+		01AD7DB4259DE4340016AA05 /* RealmServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceTests.swift; sourceTree = "<group>"; };
+		01AD7DBE259DEE6C0016AA05 /* CostLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostLevelTests.swift; sourceTree = "<group>"; };
+		01AD7DC6259DEFC00016AA05 /* RestuarantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantTests.swift; sourceTree = "<group>"; };
+		01AD7DCB259DF0650016AA05 /* RestuarantStatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantStatusTests.swift; sourceTree = "<group>"; };
+		01AD7DE0259DF9C20016AA05 /* TestHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewModel.swift; sourceTree = "<group>"; };
+		01AD7DE5259E09FB0016AA05 /* TestIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIdentifiers.swift; sourceTree = "<group>"; };
+		01AD7DEE259E11360016AA05 /* Sorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
+		01AD7DF7259E11830016AA05 /* SorterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorterTests.swift; sourceTree = "<group>"; };
 		01BE6D30259C82B9002F0877 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		01BE6D74259C9179002F0877 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		01BE6D79259C9182002F0877 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		01BE6D81259C962E002F0877 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
 		01BE6D8B259CA4EE002F0877 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
-		01BE6D93259CA58B002F0877 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		01BE6D93259CA58B002F0877 /* RestuarantStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantStatus.swift; sourceTree = "<group>"; };
 		01BE6DD9259CAD53002F0877 /* iOS sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iOS sample.json"; sourceTree = "<group>"; };
 		01BE6DE2259CAE5E002F0877 /* JsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonService.swift; sourceTree = "<group>"; };
 		01BE6DEA259CB314002F0877 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
@@ -96,6 +124,12 @@
 		01BE6E75259D22B3002F0877 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		01BE6E86259D3363002F0877 /* ImageTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextLabel.swift; sourceTree = "<group>"; };
 		01BE6E91259DB7B7002F0877 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		01BE6E97259DC915002F0877 /* EOSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSnapshotTest.swift; sourceTree = "<group>"; };
+		01BE6E9F259DCA9A002F0877 /* HomeViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		01D9BAEC259DD059004DD29B /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		01D9BAF4259DD117004DD29B /* CacheServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheServiceTests.swift; sourceTree = "<group>"; };
+		01D9BAFC259DD13A004DD29B /* iOS bad sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "iOS bad sample.json"; sourceTree = "<group>"; };
+		01D9BAFD259DD17B004DD29B /* JsonServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonServiceTests.swift; sourceTree = "<group>"; };
 		01FC3E61259C75D40053E372 /* Eat Out.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Out.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FC3E64259C75D40053E372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FC3E66259C75D40053E372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +137,6 @@
 		01FC3E70259C75D60053E372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01FC3E72259C75D60053E372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01FC3E77259C75D70053E372 /* Eat OutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eat OutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01FC3E7B259C75D70053E372 /* Eat_OutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eat_OutTests.swift; sourceTree = "<group>"; };
 		01FC3E7D259C75D70053E372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01FC3E82259C75D70053E372 /* Eat OutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eat OutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FC3E86259C75D70053E372 /* Eat_OutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eat_OutUITests.swift; sourceTree = "<group>"; };
@@ -147,14 +180,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01AD7DA6259DE17E0016AA05 /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				01AD7DAF259DE2660016AA05 /* CacheSpyDelegate.swift */,
+				01AD7DA7259DE18F0016AA05 /* TestCacheSerive.swift */,
+				01AD7DE0259DF9C20016AA05 /* TestHomeViewModel.swift */,
+			);
+			path = TestClasses;
+			sourceTree = "<group>";
+		};
+		01AD7DBC259DEE4E0016AA05 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01D9BAF4259DD117004DD29B /* CacheServiceTests.swift */,
+				01D9BAFD259DD17B004DD29B /* JsonServiceTests.swift */,
+				01AD7DB4259DE4340016AA05 /* RealmServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		01AD7DBD259DEE5D0016AA05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01AD7DBE259DEE6C0016AA05 /* CostLevelTests.swift */,
+				01AD7DC6259DEFC00016AA05 /* RestuarantTests.swift */,
+				01AD7DCB259DF0650016AA05 /* RestuarantStatusTests.swift */,
+				01AD7DF7259E11830016AA05 /* SorterTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01AD7DD0259DF2300016AA05 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				01D9BAEC259DD059004DD29B /* HomeViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		01BE6D6E259C9106002F0877 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				01FC3E6D259C75D60053E372 /* Assets.xcassets */,
 				01FC3E72259C75D60053E372 /* Info.plist */,
-				01BE6DD9259CAD53002F0877 /* iOS sample.json */,
 				01FC3E6F259C75D60053E372 /* LaunchScreen.storyboard */,
 				01BE6E63259D1E2A002F0877 /* TestingService.swift */,
+				01D9BAFC259DD13A004DD29B /* iOS bad sample.json */,
+				01BE6DD9259CAD53002F0877 /* iOS sample.json */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,10 +253,11 @@
 		01BE6D8A259CA4CF002F0877 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				01BE6D8B259CA4EE002F0877 /* Restuarant.swift */,
-				01BE6D93259CA58B002F0877 /* Status.swift */,
-				01BE6DF4259CBE8C002F0877 /* RestuarantMeta.swift */,
 				01BE6E34259D0CB1002F0877 /* CostLevel.swift */,
+				01BE6D8B259CA4EE002F0877 /* Restuarant.swift */,
+				01BE6DF4259CBE8C002F0877 /* RestuarantMeta.swift */,
+				01BE6D93259CA58B002F0877 /* RestuarantStatus.swift */,
+				01AD7DEE259E11360016AA05 /* Sorter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,9 +265,9 @@
 		01BE6DE1259CAE48002F0877 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				01BE6DEF259CBC97002F0877 /* CacheService.swift */,
 				01BE6DE2259CAE5E002F0877 /* JsonService.swift */,
 				01BE6DEA259CB314002F0877 /* RealmService.swift */,
-				01BE6DEF259CBC97002F0877 /* CacheService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -210,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				01BE6E06259D02FD002F0877 /* ImageName.swift */,
+				01AD7DE5259E09FB0016AA05 /* TestIdentifiers.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -217,13 +292,13 @@
 		01BE6E0E259D03DA002F0877 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				01BE6E0F259D03EF002F0877 /* UIColor+Utils.swift */,
-				01BE6E1D259D0583002F0877 /* UIView+Utils.swift */,
-				01BE6E2A259D088F002F0877 /* UIStackView+Utils.swift */,
-				01BE6E2F259D0BEF002F0877 /* NSMutableAttributedString+Utils.swift */,
 				01BE6E39259D0F93002F0877 /* CALayer+Utils.swift */,
-				01BE6E3E259D1288002F0877 /* UIImage+Utils.swift */,
+				01BE6E2F259D0BEF002F0877 /* NSMutableAttributedString+Utils.swift */,
 				01BE6E5E259D1DE7002F0877 /* String+Utils.swift */,
+				01BE6E0F259D03EF002F0877 /* UIColor+Utils.swift */,
+				01BE6E3E259D1288002F0877 /* UIImage+Utils.swift */,
+				01BE6E2A259D088F002F0877 /* UIStackView+Utils.swift */,
+				01BE6E1D259D0583002F0877 /* UIView+Utils.swift */,
 				01BE6E75259D22B3002F0877 /* UIViewController+Utils.swift */,
 			);
 			path = Extensions;
@@ -233,8 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				01BE6E55259D192A002F0877 /* SortCollectionView */,
-				01BE6DFF259D00B3002F0877 /* HomeCollectionViewCell.swift */,
 				01BE6E25259D0861002F0877 /* CellBottomView.swift */,
+				01BE6DFF259D00B3002F0877 /* HomeCollectionViewCell.swift */,
 				01BE6E86259D3363002F0877 /* ImageTextLabel.swift */,
 				01BE6E91259DB7B7002F0877 /* StatusView.swift */,
 			);
@@ -244,8 +319,8 @@
 		01BE6E55259D192A002F0877 /* SortCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				01BE6E43259D14F0002F0877 /* SortView.swift */,
 				01BE6E48259D15D7002F0877 /* SortCell.swift */,
+				01BE6E43259D14F0002F0877 /* SortView.swift */,
 				01BE6E56259D1939002F0877 /* SortViewModel.swift */,
 			);
 			path = SortCollectionView;
@@ -254,6 +329,8 @@
 		01BE6E96259DC8CB002F0877 /* SnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
+				01BE6E97259DC915002F0877 /* EOSnapshotTest.swift */,
+				01BE6E9F259DCA9A002F0877 /* HomeViewControllerSnapshotTests.swift */,
 			);
 			path = SnapshotTests;
 			sourceTree = "<group>";
@@ -283,12 +360,12 @@
 		01FC3E63259C75D40053E372 /* Eat Out */ = {
 			isa = PBXGroup;
 			children = (
-				01BE6E0E259D03DA002F0877 /* Extensions */,
 				01BE6E05259D02F0002F0877 /* Constants */,
-				01BE6DF9259CC6C4002F0877 /* Protocol */,
-				01BE6DE1259CAE48002F0877 /* Services */,
+				01BE6E0E259D03DA002F0877 /* Extensions */,
 				01BE6D8A259CA4CF002F0877 /* Model */,
 				01BE6D72259C9161002F0877 /* Modules */,
+				01BE6DF9259CC6C4002F0877 /* Protocol */,
+				01BE6DE1259CAE48002F0877 /* Services */,
 				01BE6D6E259C9106002F0877 /* Supporting Files */,
 				01BE6D30259C82B9002F0877 /* AppCoordinator.swift */,
 				01FC3E64259C75D40053E372 /* AppDelegate.swift */,
@@ -301,8 +378,11 @@
 		01FC3E7A259C75D70053E372 /* Eat OutTests */ = {
 			isa = PBXGroup;
 			children = (
+				01AD7DD0259DF2300016AA05 /* ViewModel */,
+				01AD7DBD259DEE5D0016AA05 /* Models */,
+				01AD7DBC259DEE4E0016AA05 /* Services */,
 				01BE6E96259DC8CB002F0877 /* SnapshotTests */,
-				01FC3E7B259C75D70053E372 /* Eat_OutTests.swift */,
+				01AD7DA6259DE17E0016AA05 /* TestClasses */,
 				01FC3E7D259C75D70053E372 /* Info.plist */,
 			);
 			path = "Eat OutTests";
@@ -447,9 +527,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BE6DDA259CAD53002F0877 /* iOS sample.json in Resources */,
 				01FC3E6E259C75D60053E372 /* Assets.xcassets in Resources */,
 				01FC3E71259C75D60053E372 /* LaunchScreen.storyboard in Resources */,
+				01BE6DDA259CAD53002F0877 /* iOS sample.json in Resources */,
 				01BE6D82259C962E002F0877 /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,36 +642,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BE6E57259D1939002F0877 /* SortViewModel.swift in Sources */,
-				01BE6E10259D03EF002F0877 /* UIColor+Utils.swift in Sources */,
 				01BE6D31259C82B9002F0877 /* AppCoordinator.swift in Sources */,
-				01BE6D8C259CA4EE002F0877 /* Restuarant.swift in Sources */,
-				01BE6E07259D02FD002F0877 /* ImageName.swift in Sources */,
-				01BE6E1E259D0583002F0877 /* UIView+Utils.swift in Sources */,
 				01FC3E65259C75D40053E372 /* AppDelegate.swift in Sources */,
-				01BE6DFB259CC6DA002F0877 /* RealmUpdateDelegate.swift in Sources */,
-				01BE6D94259CA58B002F0877 /* Status.swift in Sources */,
-				01BE6E00259D00B3002F0877 /* HomeCollectionViewCell.swift in Sources */,
-				01BE6E2B259D088F002F0877 /* UIStackView+Utils.swift in Sources */,
-				01BE6E35259D0CB1002F0877 /* CostLevel.swift in Sources */,
 				01BE6E3A259D0F93002F0877 /* CALayer+Utils.swift in Sources */,
-				01BE6E87259D3363002F0877 /* ImageTextLabel.swift in Sources */,
-				01BE6E92259DB7B7002F0877 /* StatusView.swift in Sources */,
-				01BE6E44259D14F0002F0877 /* SortView.swift in Sources */,
-				01BE6E76259D22B3002F0877 /* UIViewController+Utils.swift in Sources */,
-				01BE6E30259D0BEF002F0877 /* NSMutableAttributedString+Utils.swift in Sources */,
-				01BE6DF5259CBE8C002F0877 /* RestuarantMeta.swift in Sources */,
-				01BE6E49259D15D7002F0877 /* SortCell.swift in Sources */,
 				01BE6DF0259CBC97002F0877 /* CacheService.swift in Sources */,
-				01BE6DEB259CB314002F0877 /* RealmService.swift in Sources */,
 				01BE6E26259D0861002F0877 /* CellBottomView.swift in Sources */,
+				01BE6E35259D0CB1002F0877 /* CostLevel.swift in Sources */,
+				01AD7DEF259E11360016AA05 /* Sorter.swift in Sources */,
+				01BE6E00259D00B3002F0877 /* HomeCollectionViewCell.swift in Sources */,
 				01BE6D7A259C9182002F0877 /* HomeViewController.swift in Sources */,
-				01BE6E64259D1E2A002F0877 /* TestingService.swift in Sources */,
 				01BE6D75259C9179002F0877 /* HomeViewModel.swift in Sources */,
-				01BE6E3F259D1288002F0877 /* UIImage+Utils.swift in Sources */,
-				01BE6E5F259D1DE7002F0877 /* String+Utils.swift in Sources */,
-				01FC3E67259C75D40053E372 /* SceneDelegate.swift in Sources */,
+				01BE6E07259D02FD002F0877 /* ImageName.swift in Sources */,
+				01BE6E87259D3363002F0877 /* ImageTextLabel.swift in Sources */,
 				01BE6DE3259CAE5E002F0877 /* JsonService.swift in Sources */,
+				01BE6E30259D0BEF002F0877 /* NSMutableAttributedString+Utils.swift in Sources */,
+				01BE6DEB259CB314002F0877 /* RealmService.swift in Sources */,
+				01BE6DFB259CC6DA002F0877 /* RealmUpdateDelegate.swift in Sources */,
+				01BE6D8C259CA4EE002F0877 /* Restuarant.swift in Sources */,
+				01BE6DF5259CBE8C002F0877 /* RestuarantMeta.swift in Sources */,
+				01FC3E67259C75D40053E372 /* SceneDelegate.swift in Sources */,
+				01BE6E49259D15D7002F0877 /* SortCell.swift in Sources */,
+				01BE6E44259D14F0002F0877 /* SortView.swift in Sources */,
+				01BE6E57259D1939002F0877 /* SortViewModel.swift in Sources */,
+				01BE6D94259CA58B002F0877 /* RestuarantStatus.swift in Sources */,
+				01BE6E92259DB7B7002F0877 /* StatusView.swift in Sources */,
+				01BE6E5F259D1DE7002F0877 /* String+Utils.swift in Sources */,
+				01BE6E64259D1E2A002F0877 /* TestingService.swift in Sources */,
+				01BE6E10259D03EF002F0877 /* UIColor+Utils.swift in Sources */,
+				01BE6E3F259D1288002F0877 /* UIImage+Utils.swift in Sources */,
+				01BE6E2B259D088F002F0877 /* UIStackView+Utils.swift in Sources */,
+				01AD7DE6259E09FB0016AA05 /* TestIdentifiers.swift in Sources */,
+				01BE6E1E259D0583002F0877 /* UIView+Utils.swift in Sources */,
+				01BE6E76259D22B3002F0877 /* UIViewController+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +681,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FC3E7C259C75D70053E372 /* Eat_OutTests.swift in Sources */,
+				01D9BAF5259DD117004DD29B /* CacheServiceTests.swift in Sources */,
+				01AD7DB0259DE2660016AA05 /* CacheSpyDelegate.swift in Sources */,
+				01AD7DCC259DF0650016AA05 /* RestuarantStatusTests.swift in Sources */,
+				01AD7DC7259DEFC00016AA05 /* RestuarantTests.swift in Sources */,
+				01BE6E98259DC915002F0877 /* EOSnapshotTest.swift in Sources */,
+				01AD7DBF259DEE6C0016AA05 /* CostLevelTests.swift in Sources */,
+				01AD7DF8259E11830016AA05 /* SorterTests.swift in Sources */,
+				01BE6EA0259DCA9A002F0877 /* HomeViewControllerSnapshotTests.swift in Sources */,
+				01D9BAED259DD059004DD29B /* HomeViewModelTests.swift in Sources */,
+				01D9BAFE259DD17B004DD29B /* JsonServiceTests.swift in Sources */,
+				01AD7DB5259DE4340016AA05 /* RealmServiceTests.swift in Sources */,
+				01AD7DA8259DE18F0016AA05 /* TestCacheSerive.swift in Sources */,
+				01AD7DE1259DF9C20016AA05 /* TestHomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +701,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01AD7E1B259E1D640016AA05 /* UIColor+Utils.swift in Sources */,
+				01AD7DF3259E11400016AA05 /* Sorter.swift in Sources */,
+				01AD7DEA259E09FF0016AA05 /* TestIdentifiers.swift in Sources */,
+				01AD7E17259E1D500016AA05 /* RestuarantStatus.swift in Sources */,
 				01FC3E87259C75D70053E372 /* Eat_OutUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

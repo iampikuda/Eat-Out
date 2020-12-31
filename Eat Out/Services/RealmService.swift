@@ -7,40 +7,16 @@
 
 import RealmSwift
 
-enum Sorter: String, CaseIterable {
-    case bestMatch = "bestMatchValue"
-    case averageProductPrice
-    case ratingAverage = "rating"
-    case deliveryCosts = "deliveryCost"
-    case distance
-    case minCost = "minimumCost"
-    case newest = "newestLevel"
-    case popularity
-
-    var sortText: String {
-        switch self {
-        case .averageProductPrice: return "Price"
-        case .bestMatch: return "Best Match"
-        case .deliveryCosts: return "Delivery cost"
-        case .distance: return "Distance"
-        case .minCost: return "Minimum cost"
-        case .newest: return "Newest"
-        case .popularity: return "Popularity"
-        case .ratingAverage: return "Rating"
-        }
-    }
-}
-
 struct RealmService {
-    static func getAll(from realm: Realm, sortBy: Sorter = .bestMatch, ascending: Bool = false) -> Results<Restuarant> {
-        let results = realm.objects(Restuarant.self)
+    static func getAll(from realm: Realm, sortBy: Sorter = .bestMatch, ascending: Bool = false) -> Results<Restaurant> {
+        let results = realm.objects(Restaurant.self)
         return results.sorted(by: [
             SortDescriptor(keyPath: "statusInt", ascending: true),
             SortDescriptor(keyPath: sortBy.rawValue, ascending: ascending)
         ])
     }
 
-    static func save(_ items: [Restuarant], to realm: Realm) {
+    static func save(_ items: [Restaurant], to realm: Realm) {
         // swiftlint:disable:next force_try
         try! realm.safeWrite {
             for item in items {
@@ -49,8 +25,8 @@ struct RealmService {
         }
     }
 
-    static func saveInWrite(_ item: Restuarant, to realmInWrite: Realm) {
-        if let first = realmInWrite.objects(Restuarant.self).filter("id = '\(item.id)'").first {
+    static private func saveInWrite(_ item: Restaurant, to realmInWrite: Realm) {
+        if let first = realmInWrite.objects(Restaurant.self).filter("id = '\(item.id)'").first {
             item.isFavourited = first.isFavourited
             realmInWrite.add(item, update: .modified)
         } else {
@@ -58,10 +34,12 @@ struct RealmService {
         }
     }
 
-    static func favouriteRestuarant(_ item: Restuarant, in realm: Realm) {
+    static func favouriteRestaurant(_ item: Restaurant, in realm: Realm) {
         // swiftlint:disable:next force_try
         try! realm.safeWrite {
-            item.isFavourited.toggle()
+            if let first = realm.objects(Restaurant.self).filter("id = '\(item.id)'").first {
+                first.isFavourited.toggle()
+            }
         }
     }
 }

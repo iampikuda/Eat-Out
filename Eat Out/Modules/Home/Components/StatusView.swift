@@ -40,7 +40,7 @@ final class StatusView: UIView {
         addCorners(radius: 12, tl: true)
     }
 
-    func setStatus(_ status: Status) {
+    func setStatus(_ status: RestaurantStatus) {
         label.text = status.text
         self.isHidden = status.isHidden
         backgroundColor = status.color

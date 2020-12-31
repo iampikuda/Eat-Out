@@ -7,9 +7,14 @@
 
 import Foundation
 
+enum FileName: String {
+    case good = "iOS sample"
+    case bad = "iOS bad sample"
+}
+
 struct JsonService {
-    func getRestuarantData() throws -> Data {
-        let fileName = "iOS sample"
+    func getRestaurantData(from filename: FileName) throws -> Data {
+        let fileName = filename.rawValue
         let ext = ".json"
 
         guard let path = Bundle.main.path(forResource: fileName, ofType: ext) else {

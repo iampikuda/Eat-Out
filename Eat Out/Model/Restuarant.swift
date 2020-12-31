@@ -1,5 +1,5 @@
 //
-//  Restuarant.swift
+//  Restaurant.swift
 //  Eat Out
 //
 //  Created by Damisi Pikuda on 30/12/2020.
@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-final class Restuarant: Object {
+final class Restaurant: Object {
     @objc dynamic var id: String = "-1"
     @objc dynamic var name: String = ""
 
@@ -31,8 +31,8 @@ final class Restuarant: Object {
         return CostLevel(cost: averageProductPrice)
     }
 
-    var status: Status {
-        return Status(statusString)
+    var status: RestaurantStatus {
+        return RestaurantStatus(statusString)
     }
 
     override static func primaryKey() -> String? {
@@ -61,10 +61,43 @@ final class Restuarant: Object {
     }
 }
 
-extension Restuarant: Decodable {
+extension Restaurant: Decodable {
     enum CodingKeys: String, CodingKey {
         case id, name, sortingValues
         case statusString = "status"
+    }
+}
+
+extension Restaurant {
+    convenience init(
+        id: String,
+        name: String = "",
+        averageProductPrice: Float = 0,
+        bestMatchValue: Float = 0,
+        deliveryCost: Float = 0,
+        distance: Float = 0,
+        minimumCost: Float = 0,
+        newestLevel: Float = 0,
+        popularity: Float = 0,
+        rating: Float = 0,
+        isFavourited: Bool = false,
+        statusString: String = "",
+        statusInt: Int = 0
+    ) {
+        self.init()
+        self.id = id
+        self.name = name
+        self.averageProductPrice = averageProductPrice
+        self.bestMatchValue = bestMatchValue
+        self.deliveryCost = deliveryCost
+        self.distance = distance
+        self.minimumCost = minimumCost
+        self.newestLevel = newestLevel
+        self.popularity = popularity
+        self.rating = rating
+        self.isFavourited = isFavourited
+        self.statusString = statusString
+        self.statusInt = statusInt
     }
 }
 

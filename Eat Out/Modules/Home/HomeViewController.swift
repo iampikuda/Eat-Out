@@ -62,6 +62,10 @@ final class HomeViewController: UIViewController {
         setupSearchController()
         setupSortCollectionView()
         setupMainCollectionView()
+
+        #if DEBUG
+        setupForUITest()
+        #endif
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -149,7 +153,7 @@ extension HomeViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
         }
 
-        cell.restuarant = viewModel.restuarantAt(indexPath)
+        cell.restaurant = viewModel.restaurantAt(indexPath)
         cell.delegate = self
         return cell
     }
@@ -194,7 +198,17 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension HomeViewController: CellDelegate {
-    func favourited(restuarant: Restuarant) {
-        viewModel.favouriteResturant(restuarant)
+    func favourited(restaurant: Restaurant) {
+        viewModel.favouriteResturant(restaurant)
     }
 }
+
+#if DEBUG
+private extension HomeViewController {
+    func setupForUITest() {
+        navigationController?.navigationBar.accessibilityIdentifier = TestIdentifiers.homeControllerNav.rawValue
+        collectionView.accessibilityIdentifier = TestIdentifiers.homeCollectionView.rawValue
+        searchController.searchBar.searchTextField.accessibilityIdentifier = TestIdentifiers.homeSearchField.rawValue
+    }
+}
+#endif

@@ -17,16 +17,16 @@ protocol HomeViewModelProtocol: class {
     var numberOfRows: Int { get }
     var numberOfSection: Int { get }
 
-    func restuarantAt(_ indexPath: IndexPath) -> Restuarant
-    func favouriteResturant(_ restuarant: Restuarant)
+    func restaurantAt(_ indexPath: IndexPath) -> Restaurant
+    func favouriteResturant(_ restaurant: Restaurant)
 }
 
-final class HomeViewModel: HomeViewModelProtocol {
+class HomeViewModel: HomeViewModelProtocol {
     var notificationToken: NotificationToken?
     weak var realmDelegate: RealmUpdateDelegate?
 
     var numberOfRows: Int {
-        return filtered ? filteredArray.count : allRestuarant.count
+        return filtered ? filteredArray.count : allRestaurant.count
     }
 
     var numberOfSection: Int {
@@ -45,24 +45,24 @@ final class HomeViewModel: HomeViewModelProtocol {
         return filterText != ""
     }
 
-    var allRestuarant: Results<Restuarant> {
+    var allRestaurant: Results<Restaurant> {
         return RealmService.getAll(from: realmInstance, sortBy: sorter, ascending: ascendingOrder)
     }
 
-    var filteredArray: [Restuarant] {
-        return allRestuarant.filter({ $0.name.lowercased().contains(filterText.lowercased()) })
+    var filteredArray: [Restaurant] {
+        return allRestaurant.filter({ $0.name.lowercased().contains(filterText.lowercased()) })
     }
 
     init() {
         self.setupObserver()
     }
 
-    func restuarantAt(_ indexPath: IndexPath) -> Restuarant {
-        return filtered ? filteredArray[indexPath.row] : allRestuarant[indexPath.row]
+    func restaurantAt(_ indexPath: IndexPath) -> Restaurant {
+        return filtered ? filteredArray[indexPath.row] : allRestaurant[indexPath.row]
     }
 
     func setupObserver() {
-        notificationToken = allRestuarant.observe { [weak self] (change) in
+        notificationToken = allRestaurant.observe { [weak self] (change) in
             switch change {
             case .initial:
                 self?.realmDelegate?.gotInitialUpdate()
@@ -74,7 +74,7 @@ final class HomeViewModel: HomeViewModelProtocol {
         }
     }
 
-    func favouriteResturant(_ restuarant: Restuarant) {
-        RealmService.favouriteRestuarant(restuarant, in: realmInstance)
+    func favouriteResturant(_ Restaurant: Restaurant) {
+        RealmService.favouriteRestaurant(Restaurant, in: realmInstance)
     }
 }

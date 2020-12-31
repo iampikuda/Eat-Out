@@ -11,17 +11,21 @@ protocol CacheDelegate: class {
     func gotError(_ error: Error)
 }
 
-final class CacheService {
+class CacheService {
     weak var delegate: CacheDelegate?
 
-    func getRestuarants() {
+    var realmInstance: Realm {
+        // swiftlint:disable:next force_try
+        return try! Realm()
+    }
+
+    func getRestaurants(from fileName: FileName) {
         let q = DispatchQueue(label: "RealmBackgound", qos: .background, attributes: .concurrent)
         q.async {
             do {
-                let data = try JsonService().getRestuarantData()
-                let restuarants = try JSONDecoder().decode(RestuarantMeta.self, from: data).restaurants
-                let realm = try Realm()
-                RealmService.save(restuarants, to: realm)
+                let data = try JsonService().getRestaurantData(from: fileName)
+                let Restaurants = try JSONDecoder().decode(RestaurantMeta.self, from: data).restaurants
+                RealmService.save(Restaurants, to: self.realmInstance)
             } catch {
                 self.delegate?.gotError(error)
             }
